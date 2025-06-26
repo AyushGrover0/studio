@@ -5,7 +5,7 @@ const portfolioItems = [
   {
     title: 'Anime Music Video (AMV)',
     description: 'A dynamic AMV combining scenes from popular anime, synced perfectly to a high-energy track with custom transitions and effects.',
-    youtubeVideoId: 'L_LUpnjgPso',
+    youtubeVideoId: 'dJc8aDUZd_U',
     tags: ['Anime', 'AMV', 'VFX', 'Storytelling'],
   },
   {
