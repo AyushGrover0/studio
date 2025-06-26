@@ -17,6 +17,7 @@ const portfolioItems: {
   {
     title: 'Short-Form Content',
     description: 'Engaging clips tailored for YouTube & Instagram.',
+    youtubeVideoId: '5vtakMXA0NU',
     tags: ['Short-Form', 'Social Media', 'Transitions'],
   },
   {
