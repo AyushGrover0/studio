@@ -28,7 +28,7 @@ export function Hero() {
           🔥 Ayush Grover | Video Editor & Visual Artist
         </h1>
         <p className="mx-auto mt-6 max-w-[700px] text-lg text-primary/90 md:text-xl animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-          🎬 Crafting Edits That Speak Louder Than Words. I’m a passionate video editor and creative visual designer who turns raw clips into cinematic stories.
+          🎬 Crafting Edits That Speak Louder Than Words. From high-octane gaming montages to captivating anime edits, I turn raw clips into cinematic stories.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <Button onClick={() => scrollTo('portfolio')} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto">

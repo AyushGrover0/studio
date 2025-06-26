@@ -3,6 +3,13 @@ import { Badge } from '@/components/ui/badge';
 
 const portfolioItems = [
   {
+    title: 'Anime Music Video (AMV)',
+    description: 'A dynamic AMV combining scenes from popular anime, synced perfectly to a high-energy track with custom transitions and effects.',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+    posterUrl: 'https://placehold.co/600x400.png',
+    tags: ['Anime', 'AMV', 'VFX', 'Storytelling'],
+  },
+  {
     title: 'Gaming Montage: Valorant Ace',
     description: 'High-octane Valorant montage featuring seamless transitions, synced sound design, and impactful VFX to highlight clutch moments.',
     videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
@@ -25,7 +32,7 @@ export function Portfolio() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Visions Brought to Life</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl/relaxed">
-            Here's a gallery of stories I've told and worlds I've built. Dive in and see what we can create together.
+            Here's a gallery of stories I've told, from fast-paced gaming action to artistic anime edits. Dive in and see what we can create together.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
