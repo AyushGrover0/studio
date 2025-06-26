@@ -6,7 +6,6 @@ const portfolioItems: {
   description: string;
   tags: string[];
   youtubeVideoId?: string;
-  instagramReelId?: string;
   videoUrl?: string;
 }[] = [
   {
@@ -20,12 +19,6 @@ const portfolioItems: {
     description: 'A showcase of seamless and creative video transitions, perfect for engaging storytelling and dynamic content.',
     videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
     tags: ['Transitions', 'VFX', 'Creative Editing'],
-  },
-  {
-    title: 'Short-Form Content Compilation',
-    description: 'A collection of engaging short-form content designed for maximum retention and impact on YouTube Shorts, TikTok, and Instagram Reels.',
-    instagramReelId: 'DAQ3OGrvyvi',
-    tags: ['Short-form', 'Social Media', 'Viral Edits'],
   },
    {
     title: 'Valorant Gameplay Edit',
@@ -69,14 +62,6 @@ export function Portfolio() {
                       title={item.title}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  ) : item.instagramReelId ? (
-                    <iframe
-                      className="w-full h-full"
-                      src={`https://www.instagram.com/reel/${item.instagramReelId}/embed`}
-                      title={item.title}
-                      frameBorder="0"
                       allowFullScreen
                     ></iframe>
                   ) : null}
