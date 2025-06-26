@@ -1,35 +1,34 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 
 const portfolioItems = [
   {
     title: 'Gaming Montage: Valorant Ace',
     description: 'High-octane Valorant montage featuring seamless transitions, synced sound design, and impactful VFX to highlight clutch moments.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+    posterUrl: 'https://placehold.co/600x400.png',
     tags: ['Gaming', 'Montage', 'VFX', 'Sound Design'],
-    aiHint: "gaming montage action"
   },
   {
     title: '3D Anime Intro: "Cyber Ronin"',
     description: 'Custom 3D intro sequence created with Blender and After Effects, bringing a futuristic samurai character to life with cinematic flair.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
+    posterUrl: 'https://placehold.co/600x400.png',
     tags: ['3D Intro', 'Blender', 'After Effects', 'Anime'],
-    aiHint: "cyberpunk samurai 3d"
   },
   {
     title: 'Short-Form Content Compilation',
     description: 'A collection of engaging short-form content designed for maximum retention and impact on YouTube Shorts, TikTok, and Instagram Reels.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4',
+    posterUrl: 'https://placehold.co/600x400.png',
     tags: ['Short-form', 'Social Media', 'Viral Edits'],
-    aiHint: "social media collage"
   },
   {
     title: 'Cinematic Visual Showcase',
     description: 'A visual journey combining live-action footage with 3D elements, showcasing advanced color grading and cinematic audio sync.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
+    posterUrl: 'https://placehold.co/600x400.png',
     tags: ['Cinematic', '3D Visuals', 'Color Grading'],
-    aiHint: "cinematic landscape fantasy"
   }
 ];
 
@@ -47,14 +46,17 @@ export function Portfolio() {
           {portfolioItems.map((item, index) => (
             <Card key={index} className="overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-card">
               <CardHeader className="p-0">
-                 <Image
-                    src={item.imageUrl}
-                    alt={item.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                    data-ai-hint={item.aiHint}
-                  />
+                 <video
+                    key={item.videoUrl}
+                    poster={item.posterUrl}
+                    width="600"
+                    height="400"
+                    controls
+                    className="w-full h-auto object-cover"
+                  >
+                    <source src={item.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
               </CardHeader>
               <CardContent className="p-6">
                 <CardTitle className="text-2xl font-bold">{item.title}</CardTitle>
