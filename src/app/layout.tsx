@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: 'Ayush Grover | Video Editor & 3D Visual Artist',
-  description: 'Passionate video editor and creative visual designer who turns raw clips into cinematic stories.',
+  description: 'I’m Ayush Grover — a passionate video editor and creative visual designer who turns raw clips into cinematic stories.',
 };
 
 export default function RootLayout({

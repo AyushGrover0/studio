@@ -15,7 +15,7 @@ const skills = [
   {
     icon: <Film className="h-8 w-8 text-primary" />,
     title: "Short-Form Content",
-    description: "Engaging clips tailored for YouTube Shorts, TikTok & Instagram Reels."
+    description: "Engaging clips tailored for YouTube & Instagram."
   },
   {
     icon: <Music className="h-8 w-8 text-primary" />,
@@ -25,7 +25,7 @@ const skills = [
   {
     icon: <Code className="h-8 w-8 text-primary" />,
     title: "Creative Tech",
-    description: "Developing custom tools and viewers with Python & PyOpenGL."
+    description: "Custom 3D Viewer Concepts & Tools (Python, PyOpenGL)."
   }
 ];
 
@@ -36,7 +36,7 @@ export function Skills() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">What I Do Best</h2>
           <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed">
-            I combine technical skill with creative passion to deliver visuals that don't just look good, but also tell a story and evoke emotion.
+            From gaming montages and anime edits to custom 3D intros and visual showcases, I specialize in high-impact visuals that leave a lasting impression.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

@@ -38,9 +38,9 @@ export function Portfolio() {
     <section id="portfolio" className="py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">My Work</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Visions Brought to Life</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl/relaxed">
-            A selection of projects that showcase my passion for anime-style visual storytelling.
+            Here's a gallery of stories I've told and worlds I've built. Dive in and see what we can create together.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12">

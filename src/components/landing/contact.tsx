@@ -57,7 +57,7 @@ export function Contact() {
           <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Let's Create Together</h2>
             <p className="text-muted-foreground md:text-xl/relaxed">
-              Ready to bring your vision to the screen? Let's connect and make something amazing. DM me or fill out the form.
+              Whether you're a content creator, a gamer, or a brand looking for standout visuals — I’ve got your back. I don’t just edit videos, I bring visions to life.
             </p>
             <div className="flex items-center gap-4 text-primary">
               <AtSign className="h-6 w-6"/>
@@ -67,7 +67,7 @@ export function Contact() {
           <Card className="shadow-lg">
             <CardHeader>
               <CardTitle>Get in Touch</CardTitle>
-              <CardDescription>Fill out the form and I'll get back to you ASAP.</CardDescription>
+              <CardDescription>Let’s bring your vision to the screen — DM me or fill out the form below.</CardDescription>
             </CardHeader>
             <CardContent>
               <form ref={formRef} action={formAction} className="space-y-4">
