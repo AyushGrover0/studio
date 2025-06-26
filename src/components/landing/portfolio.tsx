@@ -29,7 +29,7 @@ const portfolioItems: {
    {
     title: 'Valorant Gameplay Edit',
     description: 'Fast-paced Valorant gameplay with synced music and sharp cuts to highlight key moments and action sequences.',
-    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+    youtubeVideoId: 'HKpiFRvN1MQ',
     tags: ['Gaming', 'Montage', 'Fast-Paced'],
   },
 ];
