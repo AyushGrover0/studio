@@ -4,46 +4,32 @@ import { Badge } from '@/components/ui/badge';
 
 const portfolioItems = [
   {
-    title: 'Project Neo-Kyoto',
-    description: 'A high-energy music video edit featuring fast cuts and vibrant visual effects, set in a futuristic cyberpunk city.',
+    title: 'Gaming Montage: Valorant Ace',
+    description: 'High-octane Valorant montage featuring seamless transitions, synced sound design, and impactful VFX to highlight clutch moments.',
     imageUrl: 'https://placehold.co/600x400.png',
-    tags: ['Music Video', 'Cyberpunk', 'VFX'],
-    aiHint: "cyberpunk city anime"
+    tags: ['Gaming', 'Montage', 'VFX', 'Sound Design'],
+    aiHint: "gaming montage action"
   },
   {
-    title: 'Galactic Drifters',
-    description: 'Promotional trailer for an indie game, focusing on character introductions and epic space battles.',
+    title: '3D Anime Intro: "Cyber Ronin"',
+    description: 'Custom 3D intro sequence created with Blender and After Effects, bringing a futuristic samurai character to life with cinematic flair.',
     imageUrl: 'https://placehold.co/600x400.png',
-    tags: ['Game Trailer', 'Sci-Fi', 'Action'],
-    aiHint: "space battle anime"
+    tags: ['3D Intro', 'Blender', 'After Effects', 'Anime'],
+    aiHint: "cyberpunk samurai 3d"
   },
   {
-    title: 'Whispers of the Forest',
-    description: 'A serene and emotional short film edit that captures the mystical atmosphere of an ancient, magical forest.',
+    title: 'Short-Form Content Compilation',
+    description: 'A collection of engaging short-form content designed for maximum retention and impact on YouTube Shorts, TikTok, and Instagram Reels.',
     imageUrl: 'https://placehold.co/600x400.png',
-    tags: ['Short Film', 'Fantasy', 'Narrative'],
-    aiHint: "enchanted forest anime"
+    tags: ['Short-form', 'Social Media', 'Viral Edits'],
+    aiHint: "social media collage"
   },
   {
-    title: 'Urban Rivals',
-    description: 'Dynamic showreel of street-style dance battles, emphasizing rhythm and high-impact motion graphics.',
+    title: 'Cinematic Visual Showcase',
+    description: 'A visual journey combining live-action footage with 3D elements, showcasing advanced color grading and cinematic audio sync.',
     imageUrl: 'https://placehold.co/600x400.png',
-    tags: ['Showreel', 'Dance', 'Motion Graphics'],
-    aiHint: "street dance anime"
-  },
-  {
-    title: 'Kinetic Transitions Pack',
-    description: 'A showcase of custom-made, high-energy transitions designed to add impact and flow to any video project.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    tags: ['Transitions', 'Motion Graphics', 'VFX'],
-    aiHint: 'abstract kinetic art'
-  },
-  {
-    title: 'The Alchemist\'s Dream',
-    description: 'A short narrative piece employing seamless match cuts and subtle morphing transitions to tell a magical story.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    tags: ['Short Film', 'Narrative', 'Seamless Transitions'],
-    aiHint: 'magical alchemy anime'
+    tags: ['Cinematic', '3D Visuals', 'Color Grading'],
+    aiHint: "cinematic landscape fantasy"
   }
 ];
 

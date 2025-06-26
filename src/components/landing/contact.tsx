@@ -1,14 +1,14 @@
 "use client";
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
 import { submitContactForm } from '@/app/actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { Loader2, Mail, Send } from 'lucide-react';
-import { useEffect, useRef } from 'react';
+import { Loader2, AtSign, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const initialState = {
@@ -27,7 +27,7 @@ function SubmitButton() {
 }
 
 export function Contact() {
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  const [state, formAction] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -55,13 +55,13 @@ export function Contact() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Let's Collaborate</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Let's Create Together</h2>
             <p className="text-muted-foreground md:text-xl/relaxed">
-              Have a project in mind? Looking for a video editor who can bring a dynamic, anime-inspired flair to your content? I'd love to hear from you.
+              Ready to bring your vision to the screen? Let's connect and make something amazing. DM me or fill out the form.
             </p>
             <div className="flex items-center gap-4 text-primary">
-              <Mail className="h-6 w-6"/>
-              <p className="text-lg">contact@animenote01.dev</p>
+              <AtSign className="h-6 w-6"/>
+              <p className="text-lg">@anime_sorcerer_0</p>
             </div>
           </div>
           <Card className="shadow-lg">

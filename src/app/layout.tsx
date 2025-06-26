@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'AnimeNote01',
-  description: 'Visually stunning anime-themed video editing portfolio.',
+  title: 'Ayush Grover | Video Editor & 3D Visual Artist',
+  description: 'Passionate video editor and creative visual designer who turns raw clips into cinematic stories.',
 };
 
 export default function RootLayout({

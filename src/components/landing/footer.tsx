@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import { AtSign } from 'lucide-react';
 
 const Logo = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
@@ -15,14 +16,14 @@ export function Footer() {
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 md:flex-row md:px-6">
         <div className="flex items-center gap-2">
           <Logo />
-          <span className="text-lg font-bold">AnimeNote01</span>
+          <span className="text-lg font-bold">Ayush Grover</span>
         </div>
         <p className="text-sm text-muted-foreground text-center md:text-left">
-          © {new Date().getFullYear()} AnimeNote01. All rights reserved.
+          © {new Date().getFullYear()} Ayush Grover. All rights reserved.
         </p>
-        <div className="flex items-center gap-4">
-          <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</Link>
-          <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</Link>
+        <div className="flex items-center gap-2 text-muted-foreground">
+          <AtSign className="h-4 w-4" />
+          <span>@anime_sorcerer_0</span>
         </div>
       </div>
     </footer>

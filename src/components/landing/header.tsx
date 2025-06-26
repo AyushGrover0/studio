@@ -39,12 +39,13 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Logo />
-          <span className="text-xl font-bold text-foreground">AnimeNote01</span>
+          <span className="text-xl font-bold text-foreground">Ayush Grover</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+          <button onClick={() => scrollTo('skills')} className="text-muted-foreground transition-colors hover:text-primary">Skills</button>
           <button onClick={() => scrollTo('portfolio')} className="text-muted-foreground transition-colors hover:text-primary">Portfolio</button>
-          <button onClick={() => scrollTo('ai-generator')} className="text-muted-foreground transition-colors hover:text-primary">AI Intro</button>
           <button onClick={() => scrollTo('testimonials')} className="text-muted-foreground transition-colors hover:text-primary">Testimonials</button>
+          <button onClick={() => scrollTo('ai-generator')} className="text-muted-foreground transition-colors hover:text-primary">AI Intro</button>
         </nav>
         <Button onClick={() => scrollTo('contact')} variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90 hidden md:inline-flex">
           Contact Me
