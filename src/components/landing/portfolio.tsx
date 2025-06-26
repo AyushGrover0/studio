@@ -5,22 +5,19 @@ const portfolioItems = [
   {
     title: 'Anime Music Video (AMV)',
     description: 'A dynamic AMV combining scenes from popular anime, synced perfectly to a high-energy track with custom transitions and effects.',
-    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-    posterUrl: 'https://placehold.co/600x400.png',
+    youtubeVideoId: 'L_LUpnjgPso',
     tags: ['Anime', 'AMV', 'VFX', 'Storytelling'],
   },
   {
     title: 'Gaming Montage: Valorant Ace',
     description: 'High-octane Valorant montage featuring seamless transitions, synced sound design, and impactful VFX to highlight clutch moments.',
-    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
-    posterUrl: 'https://placehold.co/600x400.png',
+    youtubeVideoId: 'zJO-M5C0Aak',
     tags: ['Gaming', 'Montage', 'VFX', 'Sound Design'],
   },
   {
     title: 'Short-Form Content Compilation',
     description: 'A collection of engaging short-form content designed for maximum retention and impact on YouTube Shorts, TikTok, and Instagram Reels.',
-    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4',
-    posterUrl: 'https://placehold.co/600x400.png',
+    youtubeVideoId: '7T72_o6w_yE',
     tags: ['Short-form', 'Social Media', 'Viral Edits'],
   },
 ];
@@ -39,17 +36,16 @@ export function Portfolio() {
           {portfolioItems.map((item, index) => (
             <Card key={index} className="overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-card">
               <CardHeader className="p-0">
-                 <video
-                    key={item.videoUrl}
-                    poster={item.posterUrl}
-                    width="600"
-                    height="400"
-                    controls
-                    className="w-full h-auto object-cover"
-                  >
-                    <source src={item.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                 <div className="aspect-video w-full">
+                  <iframe
+                    className="w-full h-full"
+                    src={`https://www.youtube.com/embed/${item.youtubeVideoId}`}
+                    title={item.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </CardHeader>
               <CardContent className="p-6">
                 <CardTitle className="text-2xl font-bold">{item.title}</CardTitle>
