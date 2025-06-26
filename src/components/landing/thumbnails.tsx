@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 const thumbnails = [
   {
     src: 'https://placehold.co/600x338.png',
-    alt: 'Valorant Epic Clutch thumbnail',
+    alt: 'Valorant Epic Clutch thumbnail with Phoenix and Jett',
     aiHint: 'valorant clutch',
   },
   {
