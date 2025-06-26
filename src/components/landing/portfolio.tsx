@@ -7,6 +7,7 @@ const portfolioItems: {
   tags: string[];
   youtubeVideoId?: string;
   instagramReelId?: string;
+  videoUrl?: string;
 }[] = [
   {
     title: 'Anime Music Video (AMV)',
@@ -15,16 +16,22 @@ const portfolioItems: {
     tags: ['Anime', 'AMV', 'VFX', 'Storytelling'],
   },
   {
-    title: 'Gaming Montage: Valorant Ace',
-    description: 'High-octane Valorant montage featuring seamless transitions, synced sound design, and impactful VFX to highlight clutch moments.',
-    youtubeVideoId: 'zJO-M5C0Aak',
-    tags: ['Gaming', 'Montage', 'VFX', 'Sound Design'],
+    title: 'Custom Video Transitions',
+    description: 'A showcase of seamless and creative video transitions, perfect for engaging storytelling and dynamic content.',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+    tags: ['Transitions', 'VFX', 'Creative Editing'],
   },
   {
     title: 'Short-Form Content Compilation',
     description: 'A collection of engaging short-form content designed for maximum retention and impact on YouTube Shorts, TikTok, and Instagram Reels.',
     instagramReelId: 'DAQ3OGrvyvi',
     tags: ['Short-form', 'Social Media', 'Viral Edits'],
+  },
+   {
+    title: 'Valorant Gameplay Edit',
+    description: 'Fast-paced Valorant gameplay with synced music and sharp cuts to highlight key moments and action sequences.',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+    tags: ['Gaming', 'Montage', 'Fast-Paced'],
   },
 ];
 
@@ -42,8 +49,20 @@ export function Portfolio() {
           {portfolioItems.map((item, index) => (
             <Card key={index} className="overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-card">
               <CardHeader className="p-0">
-                 <div className="aspect-video w-full">
-                  {item.youtubeVideoId ? (
+                 <div className="aspect-video w-full bg-black">
+                  {item.videoUrl ? (
+                     <video
+                      src={item.videoUrl}
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : item.youtubeVideoId ? (
                     <iframe
                       className="w-full h-full"
                       src={`https://www.youtube.com/embed/${item.youtubeVideoId}`}
