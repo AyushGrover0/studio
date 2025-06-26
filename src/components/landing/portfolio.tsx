@@ -31,6 +31,20 @@ const portfolioItems = [
     tags: ['Showreel', 'Dance', 'Motion Graphics'],
     aiHint: "street dance anime"
   },
+  {
+    title: 'Kinetic Transitions Pack',
+    description: 'A showcase of custom-made, high-energy transitions designed to add impact and flow to any video project.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    tags: ['Transitions', 'Motion Graphics', 'VFX'],
+    aiHint: 'abstract kinetic art'
+  },
+  {
+    title: 'The Alchemist\'s Dream',
+    description: 'A short narrative piece employing seamless match cuts and subtle morphing transitions to tell a magical story.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    tags: ['Short Film', 'Narrative', 'Seamless Transitions'],
+    aiHint: 'magical alchemy anime'
+  }
 ];
 
 export function Portfolio() {
