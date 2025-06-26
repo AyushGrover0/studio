@@ -1,7 +1,13 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
-const portfolioItems = [
+const portfolioItems: {
+  title: string;
+  description: string;
+  tags: string[];
+  youtubeVideoId?: string;
+  instagramReelId?: string;
+}[] = [
   {
     title: 'Anime Music Video (AMV)',
     description: 'A dynamic AMV combining scenes from popular anime, synced perfectly to a high-energy track with custom transitions and effects.',
@@ -17,7 +23,7 @@ const portfolioItems = [
   {
     title: 'Short-Form Content Compilation',
     description: 'A collection of engaging short-form content designed for maximum retention and impact on YouTube Shorts, TikTok, and Instagram Reels.',
-    youtubeVideoId: '7T72_o6w_yE',
+    instagramReelId: 'DAQ3OGrvyvi',
     tags: ['Short-form', 'Social Media', 'Viral Edits'],
   },
 ];
@@ -37,14 +43,24 @@ export function Portfolio() {
             <Card key={index} className="overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-card">
               <CardHeader className="p-0">
                  <div className="aspect-video w-full">
-                  <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${item.youtubeVideoId}`}
-                    title={item.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
+                  {item.youtubeVideoId ? (
+                    <iframe
+                      className="w-full h-full"
+                      src={`https://www.youtube.com/embed/${item.youtubeVideoId}`}
+                      title={item.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  ) : item.instagramReelId ? (
+                    <iframe
+                      className="w-full h-full"
+                      src={`https://www.instagram.com/reel/${item.instagramReelId}/embed`}
+                      title={item.title}
+                      frameBorder="0"
+                      allowFullScreen
+                    ></iframe>
+                  ) : null}
                 </div>
               </CardHeader>
               <CardContent className="p-6">
