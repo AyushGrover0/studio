@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const thumbnails = [
   {
-    src: '/valorant-clutch.jpg',
+    src: 'https://placehold.co/600x338.png',
     alt: 'Valorant Epic Clutch thumbnail',
     aiHint: 'valorant clutch',
   },
