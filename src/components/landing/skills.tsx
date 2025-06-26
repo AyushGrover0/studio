@@ -1,16 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Video, Shapes, Film, Music, Code, Star } from "lucide-react";
+import { Video, Film, Music, Star } from "lucide-react";
 
 const skills = [
   {
     icon: <Video className="h-8 w-8 text-primary" />,
     title: "Anime & Gaming Edits",
     description: "High-energy edits with perfect sync and captivating effects."
-  },
-  {
-    icon: <Shapes className="h-8 w-8 text-primary" />,
-    title: "3D Visuals",
-    description: "Custom 3D intros and visuals using Blender & After Effects."
   },
   {
     icon: <Film className="h-8 w-8 text-primary" />,
@@ -21,11 +16,6 @@ const skills = [
     icon: <Music className="h-8 w-8 text-primary" />,
     title: "Sound Design",
     description: "Cinematic audio mixing and synchronization for immersive experiences."
-  },
-  {
-    icon: <Code className="h-8 w-8 text-primary" />,
-    title: "Creative Tech",
-    description: "Custom 3D Viewer Concepts & Tools (Python, PyOpenGL)."
   }
 ];
 
@@ -36,10 +26,10 @@ export function Skills() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">What I Do Best</h2>
           <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed">
-            From gaming montages and anime edits to custom 3D intros and visual showcases, I specialize in high-impact visuals that leave a lasting impression.
+            From gaming montages and anime edits, I specialize in high-impact visuals that leave a lasting impression.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {skills.map((skill, index) => (
             <Card key={index} className="bg-card border-2 border-border/50 hover:border-accent transition-colors duration-300 flex flex-col">
               <CardHeader className="flex flex-row items-center gap-4 pb-2">

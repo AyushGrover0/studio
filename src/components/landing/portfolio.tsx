@@ -10,26 +10,12 @@ const portfolioItems = [
     tags: ['Gaming', 'Montage', 'VFX', 'Sound Design'],
   },
   {
-    title: '3D Anime Intro: "Cyber Ronin"',
-    description: 'Custom 3D intro sequence created with Blender and After Effects, bringing a futuristic samurai character to life with cinematic flair.',
-    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
-    posterUrl: 'https://placehold.co/600x400.png',
-    tags: ['3D Intro', 'Blender', 'After Effects', 'Anime'],
-  },
-  {
     title: 'Short-Form Content Compilation',
     description: 'A collection of engaging short-form content designed for maximum retention and impact on YouTube Shorts, TikTok, and Instagram Reels.',
     videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4',
     posterUrl: 'https://placehold.co/600x400.png',
     tags: ['Short-form', 'Social Media', 'Viral Edits'],
   },
-  {
-    title: 'Cinematic Visual Showcase',
-    description: 'A visual journey combining live-action footage with 3D elements, showcasing advanced color grading and cinematic audio sync.',
-    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
-    posterUrl: 'https://placehold.co/600x400.png',
-    tags: ['Cinematic', '3D Visuals', 'Color Grading'],
-  }
 ];
 
 export function Portfolio() {
