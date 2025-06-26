@@ -15,6 +15,11 @@ const portfolioItems: {
     tags: ['Anime', 'AMV', 'VFX', 'Storytelling'],
   },
   {
+    title: 'Short-Form Content',
+    description: 'Engaging clips tailored for YouTube & Instagram.',
+    tags: ['Short-Form', 'Social Media', 'Transitions'],
+  },
+  {
     title: 'Custom Video Transitions',
     description: 'A showcase of seamless and creative video transitions, perfect for engaging storytelling and dynamic content.',
     videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
