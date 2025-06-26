@@ -5,6 +5,7 @@ import { Portfolio } from '@/components/landing/portfolio';
 import { Testimonials } from '@/components/landing/testimonials';
 import { Contact } from '@/components/landing/contact';
 import { Footer } from '@/components/landing/footer';
+import { Thumbnails } from '@/components/landing/thumbnails';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Skills />
         <Portfolio />
+        <Thumbnails />
         <Testimonials />
         <Contact />
       </main>

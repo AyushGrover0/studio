@@ -44,6 +44,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           <button onClick={() => scrollTo('skills')} className="text-muted-foreground transition-colors hover:text-primary">Skills</button>
           <button onClick={() => scrollTo('portfolio')} className="text-muted-foreground transition-colors hover:text-primary">Portfolio</button>
+          <button onClick={() => scrollTo('thumbnails')} className="text-muted-foreground transition-colors hover:text-primary">Thumbnails</button>
           <button onClick={() => scrollTo('testimonials')} className="text-muted-foreground transition-colors hover:text-primary">Testimonials</button>
         </nav>
         <Button onClick={() => scrollTo('contact')} variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90 hidden md:inline-flex">

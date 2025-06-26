@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Video, Film, Music, Star } from "lucide-react";
+import { Video, Film, Music, Star, ImageIcon } from "lucide-react";
 
 const skills = [
   {
@@ -11,6 +11,11 @@ const skills = [
     icon: <Film className="h-8 w-8 text-primary" />,
     title: "Short-Form Content",
     description: "Engaging clips tailored for YouTube & Instagram."
+  },
+  {
+    icon: <ImageIcon className="h-8 w-8 text-primary" />,
+    title: "Thumbnail Design",
+    description: "Eye-catching thumbnails that boost click-through rates."
   },
   {
     icon: <Music className="h-8 w-8 text-primary" />,
@@ -29,7 +34,7 @@ export function Skills() {
             From gaming montages and anime edits, I specialize in high-impact visuals that leave a lasting impression.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill, index) => (
             <Card key={index} className="bg-card border-2 border-border/50 hover:border-accent transition-colors duration-300 flex flex-col">
               <CardHeader className="flex flex-row items-center gap-4 pb-2">
