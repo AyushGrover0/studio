@@ -13,17 +13,20 @@ export function Hero() {
   return (
     <section 
       id="hero" 
-      className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white"
-      style={{
-        backgroundImage: "url('https://placehold.co/1920x1080.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-      data-ai-hint="futuristic cityscape"
+      className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white overflow-hidden"
     >
-      <div className="absolute inset-0 bg-background/60 backdrop-brightness-75" />
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 z-0"
+        src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+      >
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute inset-0 bg-background/60 backdrop-brightness-75 z-10" />
+      <div className="relative z-20 container mx-auto px-4 md:px-6">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline animate-fade-in-up">
           🔥 Ayush Grover | Video Editor & Visual Artist
         </h1>
