@@ -3,33 +3,33 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const thumbnails = [
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Valorant gameplay thumbnail',
+    src: '/thumb1.png',
+    alt: 'Custom thumbnail 1',
     aiHint: 'youtube thumbnail valorant',
   },
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Anime music video thumbnail',
+    src: '/thumb2.png',
+    alt: 'Custom thumbnail 2',
     aiHint: 'youtube thumbnail anime',
   },
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Fortnite montage thumbnail',
+    src: '/thumb3.png',
+    alt: 'Custom thumbnail 3',
     aiHint: 'youtube thumbnail fortnite',
   },
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Creative video edit thumbnail',
+    src: '/thumb4.png',
+    alt: 'Custom thumbnail 4',
     aiHint: 'youtube thumbnail creative',
   },
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Short-form content thumbnail',
+    src: '/thumb5.png',
+    alt: 'Custom thumbnail 5',
     aiHint: 'youtube thumbnail short',
   },
    {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Tutorial video thumbnail',
+    src: '/thumb6.png',
+    alt: 'Custom thumbnail 6',
     aiHint: 'youtube thumbnail tutorial',
   },
 ];
