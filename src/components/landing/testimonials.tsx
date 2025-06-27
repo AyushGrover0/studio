@@ -8,7 +8,7 @@ const testimonials = [
     handle: 'Game Dev @ Cybergames',
     avatar: 'YT',
     image: 'https://placehold.co/100x100.png',
-    aiHint: 'anime character',
+    aiHint: 'game developer',
     testimonial: "Incredible work! The trailer they edited for our game captured the exact high-energy, futuristic vibe we were going for. The turnaround was fast, and the communication was flawless. A true pro!",
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
     handle: 'Filmmaker',
     avatar: 'AS',
     image: 'https://placehold.co/100x100.png',
-    aiHint: 'anime character portrait',
+    aiHint: 'anime director',
     testimonial: "I've never worked with an editor who understands pacing and emotional beats so intuitively. They transformed my raw footage into a cinematic masterpiece. Will definitely hire again for my next project.",
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
     handle: 'VTuber Sensation',
     avatar: 'ML',
     image: 'https://placehold.co/100x100.png',
-    aiHint: 'anime avatar',
+    aiHint: 'vTuber avatar',
     testimonial: "My stream highlights have never looked better! The edits are sharp, funny, and perfectly timed. My audience loves the new montages. 10/10 would recommend!",
   },
 ];
