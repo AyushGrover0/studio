@@ -47,6 +47,11 @@ const thumbnails = [
     alt: 'Custom thumbnail 9',
     aiHint: 'youtube thumbnail',
   },
+  {
+    src: '/thumb10.png',
+    alt: 'Custom thumbnail 10',
+    aiHint: 'youtube thumbnail',
+  },
 ];
 
 export function Thumbnails() {

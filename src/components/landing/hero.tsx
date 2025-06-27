@@ -20,7 +20,7 @@ export function Hero() {
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
       }}
-      data-ai-hint="cinematic anime montage"
+      data-ai-hint="futuristic cityscape"
     >
       <div className="absolute inset-0 bg-background/60 backdrop-brightness-75" />
       <div className="relative z-10 container mx-auto px-4 md:px-6">
