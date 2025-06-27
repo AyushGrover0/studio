@@ -4,6 +4,11 @@ import { Card, CardContent } from '@/components/ui/card';
 const thumbnails = [
   {
     src: 'https://placehold.co/600x338.png',
+    alt: 'Black and Dark Space Photo YouTube Thumbnail',
+    aiHint: 'space photo',
+  },
+  {
+    src: 'https://placehold.co/600x338.png',
     alt: 'Valorant Epic Clutch thumbnail with Phoenix and Jett',
     aiHint: 'valorant clutch',
   },
@@ -26,11 +31,6 @@ const thumbnails = [
     src: 'https://placehold.co/600x338.png',
     alt: 'Gaming thumbnail example 3',
     aiHint: 'apex legends thumbnail',
-  },
-  {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Lifestyle vlog thumbnail',
-    aiHint: 'vlog thumbnail travel',
   },
 ];
 
