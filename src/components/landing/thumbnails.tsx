@@ -3,33 +3,33 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const thumbnails = [
   {
-    src: '/thumb1.png',
-    alt: 'Custom thumbnail 1',
+    src: '/valorant-clutch-thumbnail.png',
+    alt: 'Valorant epic clutch thumbnail',
     aiHint: 'youtube thumbnail valorant',
   },
   {
-    src: '/thumb2.png',
-    alt: 'Custom thumbnail 2',
+    src: '/anime-amv-thumbnail.png',
+    alt: 'Anime music video thumbnail',
     aiHint: 'youtube thumbnail anime',
   },
   {
-    src: '/thumb3.png',
-    alt: 'Custom thumbnail 3',
+    src: '/fortnite-montage-thumbnail.png',
+    alt: 'Fortnite montage thumbnail',
     aiHint: 'youtube thumbnail fortnite',
   },
   {
-    src: '/thumb4.png',
-    alt: 'Custom thumbnail 4',
+    src: '/creative-editing-thumbnail.png',
+    alt: 'Creative video editing thumbnail',
     aiHint: 'youtube thumbnail creative',
   },
   {
-    src: '/thumb5.png',
-    alt: 'Custom thumbnail 5',
+    src: '/shorts-thumbnail.png',
+    alt: 'YouTube shorts thumbnail',
     aiHint: 'youtube thumbnail short',
   },
-   {
-    src: '/thumb6.png',
-    alt: 'Custom thumbnail 6',
+  {
+    src: '/tutorial-thumbnail.png',
+    alt: 'Video editing tutorial thumbnail',
     aiHint: 'youtube thumbnail tutorial',
   },
 ];
