@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 const thumbnails = [
   {
     src: 'https://placehold.co/600x338.png',
-    alt: 'Thumbnail designed in Canva',
+    alt: 'Black and Dark Space Photo YouTube Thumbnail',
     aiHint: 'graphic design',
   },
   {
