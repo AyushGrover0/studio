@@ -3,34 +3,34 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const thumbnails = [
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Black and Dark Space Photo YouTube Thumbnail',
-    aiHint: 'graphic design',
+    src: '/thumbnail-1.png',
+    alt: 'Custom thumbnail 1',
+    aiHint: 'youtube thumbnail',
   },
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Valorant Epic Clutch thumbnail with Phoenix and Jett',
-    aiHint: 'valorant clutch',
+    src: '/thumbnail-2.png',
+    alt: 'Custom thumbnail 2',
+    aiHint: 'youtube thumbnail',
   },
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Anime edit thumbnail example 1',
-    aiHint: 'anime edit thumbnail',
+    src: '/thumbnail-3.png',
+    alt: 'Custom thumbnail 3',
+    aiHint: 'youtube thumbnail',
   },
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Gaming thumbnail example 2',
-    aiHint: 'fortnite gaming thumbnail',
+    src: '/thumbnail-4.png',
+    alt: 'Custom thumbnail 4',
+    aiHint: 'youtube thumbnail',
   },
   {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Anime edit thumbnail example 2',
-    aiHint: 'naruto anime thumbnail',
+    src: '/thumbnail-5.png',
+    alt: 'Custom thumbnail 5',
+    aiHint: 'youtube thumbnail',
   },
    {
-    src: 'https://placehold.co/600x338.png',
-    alt: 'Gaming thumbnail example 3',
-    aiHint: 'apex legends thumbnail',
+    src: '/thumbnail-6.png',
+    alt: 'Custom thumbnail 6',
+    aiHint: 'youtube thumbnail',
   },
 ];
 
