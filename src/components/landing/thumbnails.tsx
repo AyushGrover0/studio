@@ -3,34 +3,34 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const thumbnails = [
   {
-    src: '/thumbnail-1.png',
-    alt: 'Custom thumbnail 1',
-    aiHint: 'youtube thumbnail',
+    src: 'https://placehold.co/600x338.png',
+    alt: 'Valorant gameplay thumbnail',
+    aiHint: 'youtube thumbnail valorant',
   },
   {
-    src: '/thumbnail-2.png',
-    alt: 'Custom thumbnail 2',
-    aiHint: 'youtube thumbnail',
+    src: 'https://placehold.co/600x338.png',
+    alt: 'Anime music video thumbnail',
+    aiHint: 'youtube thumbnail anime',
   },
   {
-    src: '/thumbnail-3.png',
-    alt: 'Custom thumbnail 3',
-    aiHint: 'youtube thumbnail',
+    src: 'https://placehold.co/600x338.png',
+    alt: 'Fortnite montage thumbnail',
+    aiHint: 'youtube thumbnail fortnite',
   },
   {
-    src: '/thumbnail-4.png',
-    alt: 'Custom thumbnail 4',
-    aiHint: 'youtube thumbnail',
+    src: 'https://placehold.co/600x338.png',
+    alt: 'Creative video edit thumbnail',
+    aiHint: 'youtube thumbnail creative',
   },
   {
-    src: '/thumbnail-5.png',
-    alt: 'Custom thumbnail 5',
-    aiHint: 'youtube thumbnail',
+    src: 'https://placehold.co/600x338.png',
+    alt: 'Short-form content thumbnail',
+    aiHint: 'youtube thumbnail short',
   },
    {
-    src: '/thumbnail-6.png',
-    alt: 'Custom thumbnail 6',
-    aiHint: 'youtube thumbnail',
+    src: 'https://placehold.co/600x338.png',
+    alt: 'Tutorial video thumbnail',
+    aiHint: 'youtube thumbnail tutorial',
   },
 ];
 
