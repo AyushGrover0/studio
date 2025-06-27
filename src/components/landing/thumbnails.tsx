@@ -33,12 +33,12 @@ const thumbnails = [
     aiHint: 'youtube thumbnail',
   },
   {
-    src: '/thumb7.png',
+    src: '/thumb7.jpg',
     alt: 'Custom thumbnail 7',
     aiHint: 'youtube thumbnail',
   },
   {
-    src: '/thumb8.png',
+    src: '/thumb8.jpg',
     alt: 'Custom thumbnail 8',
     aiHint: 'youtube thumbnail',
   },
