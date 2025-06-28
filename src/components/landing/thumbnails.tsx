@@ -61,7 +61,7 @@ export function Thumbnails() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {thumbnails.map((thumbnail, index) => (
-            <Card key={index} className="glass-card overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20">
+            <Card key={index} className="glass-card overflow-hidden group border-2 border-transparent transition-all duration-300 shadow-lg neon-glow-primary">
               <CardContent className="p-0">
                 <Image
                   src={thumbnail.src}
