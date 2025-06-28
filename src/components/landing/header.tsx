@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { cn } from "@/lib/utils";
 
 const Logo = () => (
   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
@@ -15,7 +14,6 @@ const Logo = () => (
 
 export function Header() {
   const headerRef = useRef<HTMLElement>(null);
-  const [burnedButtons, setBurnedButtons] = useState<Record<string, boolean>>({});
   
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -24,14 +22,6 @@ export function Header() {
     }
   };
   
-  const handleNavClick = (id: string) => {
-    scrollTo(id);
-    setBurnedButtons(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
-
   useEffect(() => {
     const headerElement = headerRef.current;
     if (!headerElement) return;
@@ -83,12 +73,12 @@ export function Header() {
           <span className="text-xl font-bold text-foreground">Ayush Grover</span>
         </Link>
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <button onClick={() => handleNavClick('skills')} className={cn("text-muted-foreground transition-all hover:text-primary px-3 py-2 rounded-md", { 'button-burned': burnedButtons['skills'] })}>Skills</button>
-          <button onClick={() => handleNavClick('portfolio')} className={cn("text-muted-foreground transition-all hover:text-primary px-3 py-2 rounded-md", { 'button-burned': burnedButtons['portfolio'] })}>Portfolio</button>
-          <button onClick={() => handleNavClick('thumbnails')} className={cn("text-muted-foreground transition-all hover:text-primary px-3 py-2 rounded-md", { 'button-burned': burnedButtons['thumbnails'] })}>Thumbnails</button>
-          <button onClick={() => handleNavClick('testimonials')} className={cn("text-muted-foreground transition-all hover:text-primary px-3 py-2 rounded-md", { 'button-burned': burnedButtons['testimonials'] })}>Testimonials</button>
+          <button onClick={() => scrollTo('skills')} className="text-muted-foreground transition-all hover:text-primary px-3 py-2 rounded-md">Skills</button>
+          <button onClick={() => scrollTo('portfolio')} className="text-muted-foreground transition-all hover:text-primary px-3 py-2 rounded-md">Portfolio</button>
+          <button onClick={() => scrollTo('thumbnails')} className="text-muted-foreground transition-all hover:text-primary px-3 py-2 rounded-md">Thumbnails</button>
+          <button onClick={() => scrollTo('testimonials')} className="text-muted-foreground transition-all hover:text-primary px-3 py-2 rounded-md">Testimonials</button>
         </nav>
-        <Button onClick={() => handleNavClick('contact')} variant="default" className={cn("bg-accent/70 text-accent-foreground hover:bg-accent/80 hidden md:inline-flex", { 'button-burned': burnedButtons['contact'] })}>
+        <Button onClick={() => scrollTo('contact')} variant="default" className="bg-accent/70 text-accent-foreground hover:bg-accent/80 hidden md:inline-flex">
           Contact Me
         </Button>
       </div>
