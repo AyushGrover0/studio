@@ -21,7 +21,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased relative transition-colors duration-500 bg-background">
+      <body className="font-body antialiased relative bg-background">
         <div className="liquid-bg" />
         <RainfallEffect />
         <div id="ripple-container" className="fixed inset-0 pointer-events-none z-[9999]"></div>

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { ThemedContainer } from '../themed-container';
 
 const thumbnails = [
   {
@@ -62,7 +61,7 @@ export function Thumbnails() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {thumbnails.map((thumbnail, index) => (
-            <ThemedContainer key={index} theme="primary">
+            <div key={index}>
               <Card className="glass-card overflow-hidden group border-2 border-transparent transition-all duration-300 shadow-lg neon-glow-primary">
                 <CardContent className="p-0">
                   <Image
@@ -75,7 +74,7 @@ export function Thumbnails() {
                   />
                 </CardContent>
               </Card>
-            </ThemedContainer>
+            </div>
           ))}
         </div>
       </div>

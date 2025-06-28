@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Video, Film, Music, Star, ImageIcon } from "lucide-react";
-import { ThemedContainer } from "../themed-container";
 
 const skills = [
   {
@@ -37,7 +36,7 @@ export function Skills() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill, index) => (
-            <ThemedContainer key={index} theme="primary">
+            <div key={index}>
               <Card className="glass-card border border-border/30 flex flex-col neon-glow-primary">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   {skill.icon}
@@ -47,9 +46,9 @@ export function Skills() {
                   <p className="text-muted-foreground">{skill.description}</p>
                 </CardContent>
               </Card>
-            </ThemedContainer>
+            </div>
           ))}
-           <ThemedContainer theme="accent">
+           <div>
              <Card className="glass-card border border-accent/50 flex flex-col neon-glow-accent">
                  <CardHeader className="flex flex-row items-center gap-4 pb-2">
                    <Star className="h-8 w-8 text-accent" />
@@ -64,7 +63,7 @@ export function Skills() {
                    </ul>
                  </CardContent>
               </Card>
-           </ThemedContainer>
+           </div>
         </div>
       </div>
     </section>

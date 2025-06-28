@@ -1,6 +1,5 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ThemedContainer } from '../themed-container';
 
 const portfolioItems: {
   title: string;
@@ -47,7 +46,7 @@ export function Portfolio() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
           {portfolioItems.map((item, index) => (
-            <ThemedContainer key={index} theme="primary">
+            <div key={index}>
               <Card className="glass-card overflow-hidden group border-2 border-transparent transition-all duration-300 shadow-lg neon-glow-primary">
                 <CardHeader className="p-0">
                    <div className="aspect-video w-full bg-black">
@@ -85,7 +84,7 @@ export function Portfolio() {
                    ))}
                 </CardFooter>
               </Card>
-            </ThemedContainer>
+            </div>
           ))}
         </div>
       </div>

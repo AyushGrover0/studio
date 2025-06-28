@@ -30,13 +30,6 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
   }
-
-  html.theme-primary-hover {
-    --background: 182 100% 8%;
-  }
-  html.theme-accent-hover {
-    --background: 0 100% 10%;
-  }
 }
 
 @layer base {
