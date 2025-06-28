@@ -12,14 +12,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "border-accent/50 text-accent hover:text-accent-foreground hover:bg-accent/70",
+          "border-accent/50 text-accent hover:text-accent-foreground",
         destructive:
-          "border-destructive/50 text-destructive hover:text-destructive-foreground hover:bg-destructive/80",
+          "border-destructive/50 text-destructive hover:text-destructive-foreground",
         outline:
-          "border-input text-foreground hover:bg-accent/70 hover:text-accent-foreground",
+          "border-input text-foreground hover:text-accent-foreground",
         secondary:
-          "border-secondary/50 text-secondary-foreground hover:bg-secondary/80",
-        ghost: "border-transparent hover:bg-accent/70 hover:text-accent-foreground",
+          "border-secondary/50 text-secondary-foreground hover:text-secondary-foreground",
+        ghost: "border-transparent hover:text-accent-foreground",
         link: "border-transparent text-accent underline-offset-4 hover:underline",
       },
       size: {
@@ -103,7 +103,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, className }), "neon-glow-accent")}
         ref={localRef}
         {...props}
       />
