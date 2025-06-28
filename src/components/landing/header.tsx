@@ -26,24 +26,39 @@ export function Header() {
     const headerElement = headerRef.current;
     if (!headerElement) return;
 
-    const handleDistortion = () => {
+    const triggerDistortion = () => {
       if (headerElement.classList.contains('header-distort')) {
         return;
       }
       headerElement.classList.add('header-distort');
     };
 
+    const handleHeaderClick = (event: MouseEvent) => {
+      triggerDistortion();
+
+      const drop = document.createElement('div');
+      drop.classList.add('raindrop');
+      drop.style.left = `${event.clientX}px`;
+      drop.style.top = `${event.clientY}px`;
+      
+      document.body.appendChild(drop);
+
+      setTimeout(() => {
+        drop.remove();
+      }, 2000);
+    };
+
     const handleAnimationEnd = () => {
       headerElement.classList.remove('header-distort');
     };
 
-    headerElement.addEventListener('mouseenter', handleDistortion);
-    headerElement.addEventListener('click', handleDistortion);
+    headerElement.addEventListener('mouseenter', triggerDistortion);
+    headerElement.addEventListener('click', handleHeaderClick);
     headerElement.addEventListener('animationend', handleAnimationEnd);
 
     return () => {
-      headerElement.removeEventListener('mouseenter', handleDistortion);
-      headerElement.removeEventListener('click', handleDistortion);
+      headerElement.removeEventListener('mouseenter', triggerDistortion);
+      headerElement.removeEventListener('click', handleHeaderClick);
       headerElement.removeEventListener('animationend', handleAnimationEnd);
     };
   }, []);
