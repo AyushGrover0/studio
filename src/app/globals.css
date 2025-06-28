@@ -214,35 +214,6 @@
   .neon-glow-primary, .neon-glow-accent {
     position: relative;
     transition: all 0.3s ease-in-out;
-    isolation: isolate;
-  }
-
-  .neon-glow-primary::after, .neon-glow-accent::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 250%;
-    height: 250%;
-    border-radius: 50%;
-    z-index: -1;
-    filter: blur(60px);
-    transition: opacity 0.4s ease-in-out;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .neon-glow-primary::after {
-    background: radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 65%);
-  }
-
-  .neon-glow-accent::after {
-    background: radial-gradient(circle, hsl(var(--accent) / 0.15) 0%, transparent 65%);
-  }
-
-  .neon-glow-primary:hover::after, .neon-glow-accent:hover::after {
-    opacity: 1;
   }
 
   .neon-glow-primary:hover {
