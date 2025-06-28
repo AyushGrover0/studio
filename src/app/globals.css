@@ -118,4 +118,31 @@
       opacity: 0;
     }
   }
+
+  @keyframes water-shimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .water-effect::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      hsl(var(--primary) / 0.1),
+      hsl(var(--accent) / 0.1),
+      hsl(var(--primary) / 0.1)
+    );
+    background-size: 200% 200%;
+    animation: water-shimmer 15s ease infinite;
+    z-index: -1;
+  }
 }
