@@ -46,25 +46,26 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button"
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-      const button = event.currentTarget
-      
-      const circle = document.createElement("span")
-      const diameter = Math.max(button.clientWidth, button.clientHeight)
-      const radius = diameter / 2
-      
-      const rect = button.getBoundingClientRect()
-      circle.style.width = circle.style.height = `${diameter}px`
-      circle.style.left = `${event.clientX - rect.left - radius}px`
-      circle.style.top = `${event.clientY - rect.top - radius}px`
-      circle.classList.add("ripple")
-      
-      button.appendChild(circle)
+      const rippleContainer = document.getElementById('ripple-container');
+      if (rippleContainer) {
+        const circle = document.createElement("span");
+        
+        const diameter = Math.max(window.innerWidth, window.innerHeight) * 2;
+        const radius = diameter / 2;
 
-      setTimeout(() => {
-        circle.remove()
-      }, 600)
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${event.clientX - radius}px`;
+        circle.style.top = `${event.clientY - radius}px`;
+        circle.classList.add("ripple-screen");
+        
+        rippleContainer.appendChild(circle);
 
-      onClick?.(event)
+        setTimeout(() => {
+          circle.remove();
+        }, 1000);
+      }
+      
+      onClick?.(event);
     }
 
     return (

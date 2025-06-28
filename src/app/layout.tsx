@@ -20,6 +20,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased relative">
+        <div id="ripple-container" className="fixed inset-0 pointer-events-none z-[9999]"></div>
         <div className="liquid-bg"></div>
         <div className="relative z-10">
           {children}
