@@ -48,7 +48,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, glow = 'accent', ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     const localRef = React.useRef<HTMLButtonElement>(null);
-    const { onMouseEnter, onMouseLeave } = useHoverTheme(glow);
+    const { onClick: changeThemeOnClick } = useHoverTheme(glow);
 
     React.useImperativeHandle(ref, () => localRef.current!);
     
@@ -56,8 +56,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         const element = localRef.current;
         if (!element) return;
 
-        const handleMouseEnterWithEffects = () => {
-            onMouseEnter();
+        const handleMouseEnter = () => {
             if (element.classList.contains('header-distort')) {
                 return;
             }
@@ -65,6 +64,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         };
 
         const handleClick = (event: MouseEvent) => {
+            changeThemeOnClick();
+            
             if (!element.classList.contains('button-breaking')) {
               element.classList.add('button-breaking');
             }
@@ -90,20 +91,18 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             }
         };
 
-        element.addEventListener('mouseenter', handleMouseEnterWithEffects);
-        element.addEventListener('mouseleave', onMouseLeave);
+        element.addEventListener('mouseenter', handleMouseEnter);
         element.addEventListener('click', handleClick);
         element.addEventListener('animationend', handleAnimationEnd);
 
         return () => {
             if (element) {
-              element.removeEventListener('mouseenter', handleMouseEnterWithEffects);
-              element.removeEventListener('mouseleave', onMouseLeave);
+              element.removeEventListener('mouseenter', handleMouseEnter);
               element.removeEventListener('click', handleClick);
               element.removeEventListener('animationend', handleAnimationEnd);
             }
         };
-    }, [onMouseEnter, onMouseLeave]);
+    }, [changeThemeOnClick]);
 
     return (
       <Comp
