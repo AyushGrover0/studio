@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Video, Film, Music, Star, ImageIcon } from "lucide-react";
+import { ThemedContainer } from "../themed-container";
 
 const skills = [
   {
@@ -36,30 +37,34 @@ export function Skills() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill, index) => (
-            <Card key={index} className="glass-card border border-border/30 flex flex-col neon-glow-primary">
-              <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                {skill.icon}
-                <CardTitle>{skill.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground">{skill.description}</p>
-              </CardContent>
-            </Card>
+            <ThemedContainer key={index} theme="primary">
+              <Card className="glass-card border border-border/30 flex flex-col neon-glow-primary">
+                <CardHeader className="flex flex-row items-center gap-4 pb-2">
+                  {skill.icon}
+                  <CardTitle>{skill.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground">{skill.description}</p>
+                </CardContent>
+              </Card>
+            </ThemedContainer>
           ))}
-           <Card className="glass-card border border-accent/50 flex flex-col neon-glow-accent">
-               <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                 <Star className="h-8 w-8 text-accent" />
-                 <CardTitle>Why Choose Me?</CardTitle>
-               </CardHeader>
-               <CardContent className="flex-grow">
-                 <ul className="space-y-2 text-muted-foreground">
-                    <li>✓ Fast delivery with precision</li>
-                    <li>✓ Attention to storytelling & timing</li>
-                    <li>✓ Unique effects tailored to your vibe</li>
-                    <li>✓ Friendly and reliable communication</li>
-                 </ul>
-               </CardContent>
-            </Card>
+           <ThemedContainer theme="accent">
+             <Card className="glass-card border border-accent/50 flex flex-col neon-glow-accent">
+                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
+                   <Star className="h-8 w-8 text-accent" />
+                   <CardTitle>Why Choose Me?</CardTitle>
+                 </CardHeader>
+                 <CardContent className="flex-grow">
+                   <ul className="space-y-2 text-muted-foreground">
+                      <li>✓ Fast delivery with precision</li>
+                      <li>✓ Attention to storytelling & timing</li>
+                      <li>✓ Unique effects tailored to your vibe</li>
+                      <li>✓ Friendly and reliable communication</li>
+                   </ul>
+                 </CardContent>
+              </Card>
+           </ThemedContainer>
         </div>
       </div>
     </section>

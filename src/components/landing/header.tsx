@@ -28,10 +28,10 @@ export function Header() {
           <span className="text-xl font-bold text-foreground text-neon-glow">Anime_Sorcerer_0</span>
         </Link>
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <Button variant="ghost" onClick={() => scrollTo('skills')}>Skills</Button>
-          <Button variant="ghost" onClick={() => scrollTo('portfolio')}>Portfolio</Button>
-          <Button variant="ghost" onClick={() => scrollTo('thumbnails')}>Thumbnails</Button>
-          <Button variant="ghost" onClick={() => scrollTo('testimonials')}>Testimonials</Button>
+          <Button variant="ghost" onClick={() => scrollTo('skills')} glow="primary">Skills</Button>
+          <Button variant="ghost" onClick={() => scrollTo('portfolio')} glow="primary">Portfolio</Button>
+          <Button variant="ghost" onClick={() => scrollTo('thumbnails')} glow="primary">Thumbnails</Button>
+          <Button variant="ghost" onClick={() => scrollTo('testimonials')} glow="primary">Testimonials</Button>
         </nav>
         <Button onClick={() => scrollTo('contact')} className="hidden md:inline-flex">
           Contact Me

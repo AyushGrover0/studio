@@ -1,5 +1,6 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { ThemedContainer } from '../themed-container';
 
 const portfolioItems: {
   title: string;
@@ -46,43 +47,45 @@ export function Portfolio() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
           {portfolioItems.map((item, index) => (
-            <Card key={index} className="glass-card overflow-hidden group border-2 border-transparent transition-all duration-300 shadow-lg neon-glow-primary">
-              <CardHeader className="p-0">
-                 <div className="aspect-video w-full bg-black">
-                  {item.videoUrl ? (
-                     <video
-                      src={item.videoUrl}
-                      className="w-full h-full object-cover"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      controls
-                    >
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : item.youtubeVideoId ? (
-                    <iframe
-                      className="w-full h-full"
-                      src={`https://www.youtube.com/embed/${item.youtubeVideoId}`}
-                      title={item.title}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  ) : null}
-                </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="text-2xl font-bold">{item.title}</CardTitle>
-                <p className="mt-2 text-muted-foreground">{item.description}</p>
-              </CardContent>
-              <CardFooter className="flex flex-wrap gap-2 px-6 pb-6">
-                 {item.tags.map((tag, tagIndex) => (
-                   <Badge key={tagIndex} variant="secondary">{tag}</Badge>
-                 ))}
-              </CardFooter>
-            </Card>
+            <ThemedContainer key={index} theme="primary">
+              <Card className="glass-card overflow-hidden group border-2 border-transparent transition-all duration-300 shadow-lg neon-glow-primary">
+                <CardHeader className="p-0">
+                   <div className="aspect-video w-full bg-black">
+                    {item.videoUrl ? (
+                       <video
+                        src={item.videoUrl}
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        controls
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : item.youtubeVideoId ? (
+                      <iframe
+                        className="w-full h-full"
+                        src={`https://www.youtube.com/embed/${item.youtubeVideoId}`}
+                        title={item.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    ) : null}
+                  </div>
+                </CardHeader>
+                <CardContent className="p-6">
+                  <CardTitle className="text-2xl font-bold">{item.title}</CardTitle>
+                  <p className="mt-2 text-muted-foreground">{item.description}</p>
+                </CardContent>
+                <CardFooter className="flex flex-wrap gap-2 px-6 pb-6">
+                   {item.tags.map((tag, tagIndex) => (
+                     <Badge key={tagIndex} variant="secondary">{tag}</Badge>
+                   ))}
+                </CardFooter>
+              </Card>
+            </ThemedContainer>
           ))}
         </div>
       </div>

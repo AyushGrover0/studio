@@ -5,6 +5,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
+import { useHoverTheme } from "@/hooks/use-hover-theme"
 
 const buttonVariants = cva(
   "relative overflow-hidden inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-transparent backdrop-blur-2xl water-effect",
@@ -40,12 +41,14 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
+  glow?: 'primary' | 'accent'
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, glow = 'accent', ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     const localRef = React.useRef<HTMLButtonElement>(null);
+    const { onMouseEnter, onMouseLeave } = useHoverTheme(glow);
 
     React.useImperativeHandle(ref, () => localRef.current!);
     
@@ -53,7 +56,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         const element = localRef.current;
         if (!element) return;
 
-        const handleMouseEnter = () => {
+        const handleMouseEnterWithEffects = () => {
+            onMouseEnter();
             if (element.classList.contains('header-distort')) {
                 return;
             }
@@ -61,8 +65,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         };
 
         const handleClick = (event: MouseEvent) => {
-            handleMouseEnter();
-
             if (!element.classList.contains('button-breaking')) {
               element.classList.add('button-breaking');
             }
@@ -88,22 +90,24 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             }
         };
 
-        element.addEventListener('mouseenter', handleMouseEnter);
+        element.addEventListener('mouseenter', handleMouseEnterWithEffects);
+        element.addEventListener('mouseleave', onMouseLeave);
         element.addEventListener('click', handleClick);
         element.addEventListener('animationend', handleAnimationEnd);
 
         return () => {
             if (element) {
-              element.removeEventListener('mouseenter', handleMouseEnter);
+              element.removeEventListener('mouseenter', handleMouseEnterWithEffects);
+              element.removeEventListener('mouseleave', onMouseLeave);
               element.removeEventListener('click', handleClick);
               element.removeEventListener('animationend', handleAnimationEnd);
             }
         };
-    }, []);
+    }, [onMouseEnter, onMouseLeave]);
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }), "neon-glow-accent")}
+        className={cn(buttonVariants({ variant, size, className }), glow && `neon-glow-${glow}`)}
         ref={localRef}
         {...props}
       />

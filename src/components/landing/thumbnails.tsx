@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
+import { ThemedContainer } from '../themed-container';
 
 const thumbnails = [
   {
@@ -61,18 +62,20 @@ export function Thumbnails() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {thumbnails.map((thumbnail, index) => (
-            <Card key={index} className="glass-card overflow-hidden group border-2 border-transparent transition-all duration-300 shadow-lg neon-glow-primary">
-              <CardContent className="p-0">
-                <Image
-                  src={thumbnail.src}
-                  alt={thumbnail.alt}
-                  width={600}
-                  height={338}
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                  data-ai-hint={thumbnail.aiHint}
-                />
-              </CardContent>
-            </Card>
+            <ThemedContainer key={index} theme="primary">
+              <Card className="glass-card overflow-hidden group border-2 border-transparent transition-all duration-300 shadow-lg neon-glow-primary">
+                <CardContent className="p-0">
+                  <Image
+                    src={thumbnail.src}
+                    alt={thumbnail.alt}
+                    width={600}
+                    height={338}
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                    data-ai-hint={thumbnail.aiHint}
+                  />
+                </CardContent>
+              </Card>
+            </ThemedContainer>
           ))}
         </div>
       </div>
