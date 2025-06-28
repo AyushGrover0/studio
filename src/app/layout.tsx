@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className="font-body antialiased relative">
         <div id="ripple-container" className="fixed inset-0 pointer-events-none z-[9999]"></div>
         <div className="liquid-bg"></div>
-        <div className="relative z-10">
+        <div className="relative z-10 bg-background/90 backdrop-blur-lg">
           {children}
         </div>
         <Toaster />
