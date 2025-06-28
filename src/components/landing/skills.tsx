@@ -36,7 +36,7 @@ export function Skills() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill, index) => (
-            <Card key={index} className="glass-card border border-border/30 hover:border-accent transition-colors duration-300 flex flex-col">
+            <Card key={index} className="glass-card border border-border/30 flex flex-col neon-glow-primary">
               <CardHeader className="flex flex-row items-center gap-4 pb-2">
                 {skill.icon}
                 <CardTitle>{skill.title}</CardTitle>
@@ -46,7 +46,7 @@ export function Skills() {
               </CardContent>
             </Card>
           ))}
-           <Card className="glass-card border border-accent/50 hover:border-accent transition-colors duration-300 flex flex-col">
+           <Card className="glass-card border border-accent/50 flex flex-col neon-glow-accent">
                <CardHeader className="flex flex-row items-center gap-4 pb-2">
                  <Star className="h-8 w-8 text-accent" />
                  <CardTitle>Why Choose Me?</CardTitle>

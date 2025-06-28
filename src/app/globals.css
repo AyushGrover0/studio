@@ -201,4 +201,35 @@
     animation: fall-and-fade 1.5s ease-in forwards;
     filter: blur(2px);
   }
+
+  @keyframes neon-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      opacity: 1;
+    }
+    20%, 24%, 55% {
+      opacity: 0.9;
+    }
+  }
+
+  .neon-glow-primary, .neon-glow-accent {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .neon-glow-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 5px hsl(var(--primary)/0.8),
+                0 0 15px hsl(var(--primary)/0.6),
+                0 0 30px hsl(var(--primary)/0.4);
+    border-color: hsl(var(--primary));
+    animation: neon-flicker 1.5s infinite alternate;
+  }
+  
+  .neon-glow-accent:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 5px hsl(var(--accent)/0.8),
+                0 0 15px hsl(var(--accent)/0.6),
+                0 0 30px hsl(var(--accent)/0.4);
+    border-color: hsl(var(--accent));
+    animation: neon-flicker 1.5s infinite alternate;
+  }
 }
