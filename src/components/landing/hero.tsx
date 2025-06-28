@@ -34,10 +34,10 @@ export function Hero() {
           🎬 Crafting Edits That Speak Louder Than Words. From high-octane gaming montages to captivating anime edits, I turn raw clips into cinematic stories.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-          <Button onClick={() => scrollTo('portfolio')} size="lg" className="bg-primary/70 text-primary-foreground hover:bg-primary/80 w-full sm:w-auto">
+          <Button onClick={() => scrollTo('portfolio')} size="lg" className="w-full sm:w-auto">
             Explore My Work
           </Button>
-          <Button onClick={() => scrollTo('contact')} size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/70 hover:text-accent-foreground w-full sm:w-auto">
+          <Button onClick={() => scrollTo('contact')} size="lg" className="w-full sm:w-auto">
             Get In Touch
           </Button>
         </div>

@@ -33,7 +33,7 @@ export function Header() {
           <Button variant="ghost" onClick={() => scrollTo('thumbnails')}>Thumbnails</Button>
           <Button variant="ghost" onClick={() => scrollTo('testimonials')}>Testimonials</Button>
         </nav>
-        <Button onClick={() => scrollTo('contact')} variant="outline" className="border-accent text-accent hover:bg-accent/70 hover:text-accent-foreground hidden md:inline-flex">
+        <Button onClick={() => scrollTo('contact')} className="hidden md:inline-flex">
           Contact Me
         </Button>
       </div>
