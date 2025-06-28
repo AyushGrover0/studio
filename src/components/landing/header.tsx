@@ -21,19 +21,19 @@ export function Header() {
   
   return (
     <header 
-      className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-lg border-b border-border/30">
+      className="sticky top-0 z-50 w-full bg-background border-b border-border/30">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Logo />
-          <span className="text-xl font-bold text-foreground text-neon-glow">Anime_Sorcerer_0</span>
+          <span className="text-xl font-bold text-foreground">Anime_Sorcerer_0</span>
         </Link>
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <Button variant="ghost" onClick={() => scrollTo('skills')} glow="primary">Skills</Button>
-          <Button variant="ghost" onClick={() => scrollTo('portfolio')} glow="primary">Portfolio</Button>
-          <Button variant="ghost" onClick={() => scrollTo('thumbnails')} glow="primary">Thumbnails</Button>
-          <Button variant="ghost" onClick={() => scrollTo('testimonials')} glow="primary">Testimonials</Button>
+          <Button variant="ghost" onClick={() => scrollTo('skills')}>Skills</Button>
+          <Button variant="ghost" onClick={() => scrollTo('portfolio')}>Portfolio</Button>
+          <Button variant="ghost" onClick={() => scrollTo('thumbnails')}>Thumbnails</Button>
+          <Button variant="ghost" onClick={() => scrollTo('testimonials')}>Testimonials</Button>
         </nav>
-        <Button onClick={() => scrollTo('contact')} className="hidden md:inline-flex" glow="accent">
+        <Button onClick={() => scrollTo('contact')} className="hidden md:inline-flex">
           Contact Me
         </Button>
       </div>
