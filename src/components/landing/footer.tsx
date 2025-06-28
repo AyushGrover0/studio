@@ -16,10 +16,10 @@ export function Footer() {
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 md:flex-row md:px-6">
         <div className="flex items-center gap-2">
           <Logo />
-          <span className="text-lg font-bold">Ayush Grover</span>
+          <span className="text-lg font-bold">Anime_Sorcerer_0</span>
         </div>
         <p className="text-sm text-muted-foreground text-center md:text-left">
-          © {new Date().getFullYear()} Ayush Grover. All rights reserved.
+          © {new Date().getFullYear()} Anime_Sorcerer_0. All rights reserved.
         </p>
         <div className="flex items-center gap-2 text-muted-foreground">
           <AtSign className="h-4 w-4" />

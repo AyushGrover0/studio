@@ -4,8 +4,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { GlobalRippleEffect } from '@/components/global-ripple-effect';
 
 export const metadata: Metadata = {
-  title: 'Ayush Grover | Video Editor & Visual Artist',
-  description: 'I’m Ayush Grover — a passionate video editor and creative visual designer who turns raw clips into cinematic stories, from gaming montages to anime edits.',
+  title: 'Anime_Sorcerer_0 | Video Editor & Visual Artist',
+  description: 'I’m Anime_Sorcerer_0 — a passionate video editor and creative visual designer who turns raw clips into cinematic stories, from gaming montages to anime edits.',
 };
 
 export default function RootLayout({
