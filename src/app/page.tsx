@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <div className="bg-background/80 backdrop-blur-lg">
+        <div className="bg-background/30 backdrop-blur-lg">
           <Skills />
           <Portfolio />
           <Thumbnails />

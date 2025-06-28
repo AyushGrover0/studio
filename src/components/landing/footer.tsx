@@ -12,7 +12,7 @@ const Logo = () => (
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/30 bg-background/80 backdrop-blur-lg relative overflow-hidden">
+    <footer className="border-t border-border/30 bg-background/30 backdrop-blur-lg relative overflow-hidden">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 md:flex-row md:px-6">
         <div className="flex items-center gap-2">
           <Logo />
