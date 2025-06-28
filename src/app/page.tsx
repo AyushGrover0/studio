@@ -13,11 +13,13 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Skills />
-        <Portfolio />
-        <Thumbnails />
-        <Testimonials />
-        <Contact />
+        <div className="bg-background/80 backdrop-blur-lg">
+          <Skills />
+          <Portfolio />
+          <Thumbnails />
+          <Testimonials />
+          <Contact />
+        </div>
       </main>
       <Footer />
     </div>
