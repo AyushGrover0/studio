@@ -20,9 +20,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased relative bg-background transition-colors duration-500">
+      <body className="font-body antialiased relative transition-colors duration-500">
+        <div className="liquid-bg" />
         <div id="ripple-container" className="fixed inset-0 pointer-events-none z-[9999]"></div>
-        <div className="relative z-10">
+        <div className="relative z-10 bg-background/90 backdrop-blur-2xl">
           {children}
         </div>
         <Toaster />
