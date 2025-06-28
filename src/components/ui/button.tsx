@@ -12,7 +12,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "border-accent/50 text-accent hover:text-accent-foreground",
+          "border-neon-red/50 text-neon-red hover:text-neon-red-foreground",
         destructive:
           "border-destructive/50 text-destructive hover:text-destructive-foreground",
         outline:
@@ -20,7 +20,7 @@ const buttonVariants = cva(
         secondary:
           "border-secondary/50 text-secondary-foreground hover:text-secondary-foreground",
         ghost: "border-transparent hover:text-accent-foreground",
-        link: "border-transparent text-accent underline-offset-4 hover:underline",
+        link: "border-transparent text-neon-red underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-4 py-2",

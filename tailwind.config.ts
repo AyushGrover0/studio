@@ -41,6 +41,10 @@ export default {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
+        'neon-red': {
+          DEFAULT: 'hsl(var(--neon-red))',
+          foreground: 'hsl(var(--neon-red-foreground))',
+        },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',

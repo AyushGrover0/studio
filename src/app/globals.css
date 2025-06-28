@@ -16,7 +16,7 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 220 40% 25%;
     --muted-foreground: 0 0% 60%;
-    --accent: 240 50% 10%;
+    --accent: 0 0% 0%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
@@ -29,6 +29,8 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --neon-red: 330 100% 71%;
+    --neon-red-foreground: 220 60% 10%;
   }
 }
 
@@ -188,10 +190,10 @@
   
   .neon-glow-accent:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0 15px hsl(var(--accent)),
-                0 0 60px hsl(var(--accent)/0.8),
-                0 0 120px hsl(var(--accent)/0.5);
-    border-color: hsl(var(--accent));
+    box-shadow: 0 0 15px hsl(var(--neon-red)),
+                0 0 60px hsl(var(--neon-red)/0.8),
+                0 0 120px hsl(var(--neon-red)/0.5);
+    border-color: hsl(var(--neon-red));
     animation: neon-flicker 1.5s infinite alternate;
   }
 
