@@ -25,7 +25,7 @@ export default function RootLayout({
         <div className="liquid-bg" />
         <RainfallEffect />
         <div id="ripple-container" className="fixed inset-0 pointer-events-none z-[9999]"></div>
-        <div className="relative z-10 bg-background/90 backdrop-blur-2xl">
+        <div className="relative z-10 bg-background/30 backdrop-blur-2xl">
           {children}
         </div>
         <Toaster />

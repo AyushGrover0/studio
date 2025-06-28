@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 
 const Logo = () => (
   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
@@ -12,6 +13,8 @@ const Logo = () => (
 );
 
 export function Header() {
+  const headerRef = useRef<HTMLElement>(null);
+
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -19,8 +22,37 @@ export function Header() {
     }
   };
   
+  useEffect(() => {
+    const element = headerRef.current;
+    if (!element) return;
+
+    const handleMouseEnter = () => {
+        if (element.classList.contains('header-distort')) {
+            return;
+        }
+        element.classList.add('header-distort');
+    };
+
+    const handleAnimationEnd = (e: AnimationEvent) => {
+        if (e.animationName === 'header-distortion') {
+          element.classList.remove('header-distort');
+        }
+    };
+
+    element.addEventListener('mouseenter', handleMouseEnter);
+    element.addEventListener('animationend', handleAnimationEnd);
+
+    return () => {
+        if (element) {
+          element.removeEventListener('mouseenter', handleMouseEnter);
+          element.removeEventListener('animationend', handleAnimationEnd);
+        }
+    };
+  }, []);
+
   return (
     <header 
+      ref={headerRef}
       className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-lg border-b border-border/30">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
@@ -28,10 +60,10 @@ export function Header() {
           <span className="text-xl font-bold text-foreground">Anime_Sorcerer_0</span>
         </Link>
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <Button variant="ghost" onClick={() => scrollTo('skills')}>Skills</Button>
-          <Button variant="ghost" onClick={() => scrollTo('portfolio')}>Portfolio</Button>
-          <Button variant="ghost" onClick={() => scrollTo('thumbnails')}>Thumbnails</Button>
-          <Button variant="ghost" onClick={() => scrollTo('testimonials')}>Testimonials</Button>
+          <Button variant="ghost" onClick={() => scrollTo('skills')} glow="primary">Skills</Button>
+          <Button variant="ghost" onClick={() => scrollTo('portfolio')} glow="primary">Portfolio</Button>
+          <Button variant="ghost" onClick={() => scrollTo('thumbnails')} glow="primary">Thumbnails</Button>
+          <Button variant="ghost" onClick={() => scrollTo('testimonials')} glow="primary">Testimonials</Button>
         </nav>
         <Button onClick={() => scrollTo('contact')} className="hidden md:inline-flex" glow="accent">
           Contact Me
