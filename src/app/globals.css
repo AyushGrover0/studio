@@ -16,7 +16,7 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 240 30% 20%;
     --muted-foreground: 0 0% 60%;
-    --accent: 0 100% 65%;
+    --accent: 0 100% 50%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
@@ -45,6 +45,7 @@
   }
   body {
     @apply text-foreground;
+    @apply bg-background;
   }
 }
 
@@ -64,46 +65,9 @@
     animation: fade-in-up 0.8s ease-out forwards;
     opacity: 0;
   }
-  
-  @keyframes float-1 {
-    0% { transform: translateY(0px) translateX(0px); }
-    25% { transform: translateY(20px) translateX(20px); }
-    50% { transform: translateY(-20px) translateX(0px); }
-    75% { transform: translateY(20px) translateX(-20px); }
-    100% { transform: translateY(0px) translateX(0px); }
-  }
-
-  @keyframes float-2 {
-    0% { transform: translateY(0px) translateX(0px); }
-    25% { transform: translateY(-30px) translateX(10px); }
-    50% { transform: translateY(10px) translateX(30px); }
-    75% { transform: translateY(-10px) translateX(-30px); }
-    100% { transform: translateY(0px) translateX(0px); }
-  }
-
-  .liquid-bg {
-    @apply absolute inset-0 z-0 overflow-hidden;
-  }
-
-  .liquid-bg::before,
-  .liquid-bg::after {
-    content: '';
-    @apply absolute w-[40vw] h-[40vw] min-w-[400px] min-h-[400px] rounded-full opacity-30;
-    filter: blur(120px);
-  }
-
-  .liquid-bg::before {
-    @apply bg-primary top-[5%] left-[5%];
-    animation: float-1 40s infinite ease-in-out;
-  }
-
-  .liquid-bg::after {
-    @apply bg-accent bottom-[5%] right-[5%];
-    animation: float-2 50s infinite ease-in-out -10s;
-  }
 
   .glass-card {
-      @apply bg-card/60 backdrop-blur-lg;
+      @apply bg-card;
   }
 
   .ripple-screen {
@@ -126,31 +90,6 @@
     }
   }
 
-  @keyframes water-shimmer {
-    0%, 100% {
-      background-position: 0% 50%;
-      opacity: 0.3;
-    }
-    50% {
-      background-position: 100% 50%;
-      opacity: 0.5;
-    }
-  }
-
-  .water-effect::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      radial-gradient(ellipse 50% 50% at 20% 40%, hsl(var(--primary)/0.2) 0%, transparent 100%),
-      radial-gradient(ellipse 50% 50% at 80% 60%, hsl(var(--accent)/0.2) 0%, transparent 100%);
-    background-size: 250% 250%, 300% 300%;
-    background-position: 0% 0%, 100% 100%;
-    animation: water-shimmer 12s ease-in-out infinite alternate;
-    will-change: background-position, opacity;
-    z-index: -1;
-  }
-  
   @keyframes header-distortion {
     0% {
       backdrop-filter: blur(20px) brightness(1);
