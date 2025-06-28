@@ -57,13 +57,13 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Logo />
-          <span className="text-xl font-bold text-foreground">Anime_Sorcerer_0</span>
+          <span className="text-xl font-bold text-foreground font-headline">A.G. VISUALS</span>
         </Link>
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <Button variant="ghost" onClick={() => scrollTo('skills')} glow="accent">Skills</Button>
-          <Button variant="ghost" onClick={() => scrollTo('portfolio')} glow="accent">Portfolio</Button>
-          <Button variant="ghost" onClick={() => scrollTo('thumbnails')} glow="accent">Thumbnails</Button>
-          <Button variant="ghost" onClick={() => scrollTo('testimonials')} glow="accent">Testimonials</Button>
+          <Button variant="ghost" onClick={() => scrollTo('skills')}>Skills</Button>
+          <Button variant="ghost" onClick={() => scrollTo('portfolio')}>Portfolio</Button>
+          <Button variant="ghost" onClick={() => scrollTo('thumbnails')}>Thumbnails</Button>
+          <Button variant="ghost" onClick={() => scrollTo('testimonials')}>Testimonials</Button>
         </nav>
         <Button onClick={() => scrollTo('contact')} className="hidden md:inline-flex" glow="accent">
           Contact Me

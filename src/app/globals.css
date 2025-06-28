@@ -4,32 +4,32 @@
 
 @layer base {
   :root {
-    --background: 220 60% 15%;
-    --foreground: 0 0% 98%;
-    --card: 220 50% 18%;
-    --card-foreground: 0 0% 98%;
-    --popover: 220 50% 18%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 182 100% 74%;
-    --primary-foreground: 220 60% 10%;
-    --secondary: 220 40% 25%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 220 40% 25%;
-    --muted-foreground: 0 0% 60%;
+    --background: 220 60% 5%;
+    --foreground: 210 40% 98%;
+    --card: 220 50% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 50% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 182 100% 50%;
+    --primary-foreground: 220 60% 5%;
+    --secondary: 220 40% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 40% 15%;
+    --muted-foreground: 210 40% 60%;
     --accent: 0 0% 0%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 40% 30%;
-    --input: 220 40% 30%;
-    --ring: 182 100% 74%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 40% 20%;
+    --input: 220 40% 20%;
+    --ring: 182 100% 50%;
     --radius: 0.8rem;
-    --chart-1: 182 100% 74%;
+    --chart-1: 182 100% 50%;
     --chart-2: 210 90% 60%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --neon-red: 0 100% 60%;
+    --neon-red: 0 100% 50%;
     --neon-red-foreground: 220 60% 10%;
   }
 }
@@ -40,6 +40,7 @@
   }
   body {
     @apply text-foreground;
+    background-color: hsl(var(--background));
   }
 }
 
@@ -185,7 +186,6 @@
                 0 0 60px hsl(var(--primary)/0.8),
                 0 0 120px hsl(var(--primary)/0.5);
     border-color: hsl(var(--primary));
-    animation: neon-flicker 1.5s infinite alternate;
   }
   
   .neon-glow-accent:hover {
@@ -264,14 +264,14 @@
     height: 200vw;
     top: -50%;
     left: -50%;
-    background-color: hsl(var(--primary));
+    background-color: hsl(var(--accent));
     animation: rotate 15s cubic-bezier(0.7, 0.2, 0.5, 0.9) infinite;
     border-radius: 45%;
     opacity: 0.3;
     filter: blur(100px);
   }
   .liquid-bg::after {
-    background-color: hsl(var(--accent));
+    background-color: hsl(var(--primary));
     animation-direction: reverse;
     animation-duration: 12s;
     border-radius: 40%;

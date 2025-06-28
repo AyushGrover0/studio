@@ -5,8 +5,8 @@ import { GlobalRippleEffect } from '@/components/global-ripple-effect';
 import { RainfallEffect } from '@/components/global-rainfall-effect';
 
 export const metadata: Metadata = {
-  title: 'Anime_Sorcerer_0 | Video Editor & Visual Artist',
-  description: 'I’m Anime_Sorcerer_0 — a passionate video editor and creative visual designer who turns raw clips into cinematic stories, from gaming montages to anime edits.',
+  title: 'A.G. Visuals | Cybernetic Video & Motion Design',
+  description: 'A.G. Visuals — A cyber-creative specializing in high-impact video editing and motion artistry for the next generation of content.',
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased relative bg-background">
         <div className="liquid-bg" />

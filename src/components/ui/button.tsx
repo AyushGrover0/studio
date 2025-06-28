@@ -7,20 +7,20 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "relative overflow-hidden inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background",
+  "relative overflow-hidden inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-transparent",
   {
     variants: {
       variant: {
         default:
-          "border-neon-red/50 text-neon-red hover:text-neon-red-foreground",
+          "border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground",
         destructive:
           "border-destructive/50 text-destructive hover:text-destructive-foreground",
         outline:
-          "border-input text-foreground hover:text-accent-foreground",
+          "border-input text-foreground hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "border-secondary/50 text-secondary-foreground hover:text-secondary-foreground",
-        ghost: "border-transparent hover:text-accent-foreground",
-        link: "border-transparent text-neon-red underline-offset-4 hover:underline",
+          "border-secondary/50 text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground",
+        ghost: "border-transparent text-primary/80 hover:bg-primary/10 hover:text-primary",
+        link: "border-transparent text-primary underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -108,7 +108,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }), glow && `neon-glow-${glow}`)}
+        className={cn(buttonVariants({ variant, size, className }), glow && (glow === 'accent' ? 'neon-glow-accent' : 'neon-glow-primary'))}
         ref={localRef}
         {...props}
         onClick={handleClick}
