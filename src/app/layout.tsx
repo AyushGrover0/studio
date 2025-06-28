@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { GlobalRippleEffect } from '@/components/global-ripple-effect';
+import { RainfallEffect } from '@/components/global-rainfall-effect';
 
 export const metadata: Metadata = {
   title: 'Anime_Sorcerer_0 | Video Editor & Visual Artist',
@@ -22,6 +23,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased relative transition-colors duration-500">
         <div className="liquid-bg" />
+        <RainfallEffect />
         <div id="ripple-container" className="fixed inset-0 pointer-events-none z-[9999]"></div>
         <div className="relative z-10 bg-background/90 backdrop-blur-2xl">
           {children}

@@ -21,7 +21,7 @@ export function Header() {
   
   return (
     <header 
-      className="sticky top-0 z-50 w-full bg-background border-b border-border/30">
+      className="sticky top-0 z-50 w-full bg-background/60 backdrop-blur-lg border-b border-border/30">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Logo />
@@ -33,7 +33,7 @@ export function Header() {
           <Button variant="ghost" onClick={() => scrollTo('thumbnails')}>Thumbnails</Button>
           <Button variant="ghost" onClick={() => scrollTo('testimonials')}>Testimonials</Button>
         </nav>
-        <Button onClick={() => scrollTo('contact')} className="hidden md:inline-flex">
+        <Button onClick={() => scrollTo('contact')} className="hidden md:inline-flex" glow="accent">
           Contact Me
         </Button>
       </div>
