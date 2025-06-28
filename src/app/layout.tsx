@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { GlobalRippleEffect } from '@/components/global-ripple-effect';
 
 export const metadata: Metadata = {
   title: 'Ayush Grover | Video Editor & Visual Artist',
@@ -26,6 +27,7 @@ export default function RootLayout({
           {children}
         </div>
         <Toaster />
+        <GlobalRippleEffect />
       </body>
     </html>
   );

@@ -42,37 +42,12 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, onClick, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
-
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-      const rippleContainer = document.getElementById('ripple-container');
-      if (rippleContainer) {
-        const circle = document.createElement("span");
-        
-        const diameter = Math.max(window.innerWidth, window.innerHeight) * 2;
-        const radius = diameter / 2;
-
-        circle.style.width = circle.style.height = `${diameter}px`;
-        circle.style.left = `${event.clientX - radius}px`;
-        circle.style.top = `${event.clientY - radius}px`;
-        circle.classList.add("ripple-screen");
-        
-        rippleContainer.appendChild(circle);
-
-        setTimeout(() => {
-          circle.remove();
-        }, 1000);
-      }
-      
-      onClick?.(event);
-    }
-
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        onClick={handleClick}
         {...props}
       />
     )
