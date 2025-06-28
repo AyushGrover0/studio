@@ -61,7 +61,7 @@ export function Contact() {
             </p>
             <div className="flex items-center gap-4 text-primary">
               <AtSign className="h-6 w-6"/>
-              <p className="text-lg">@anime_sorcerer_0</p>
+              <p className="text-lg">Ayush Grover</p>
             </div>
           </div>
           <Card className="shadow-lg glass-card border border-border/30">
