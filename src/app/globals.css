@@ -66,7 +66,7 @@
   }
 
   .glass-card {
-      @apply bg-card;
+      @apply bg-card/60 backdrop-blur-sm;
   }
 
   .ripple-screen {
@@ -163,10 +163,10 @@
 
   .neon-glow-primary:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0 15px hsl(var(--accent)),
-                0 0 60px hsl(var(--accent)/0.8),
-                0 0 120px hsl(var(--accent)/0.5);
-    border-color: hsl(var(--accent));
+    box-shadow: 0 0 15px hsl(var(--primary)),
+                0 0 60px hsl(var(--primary)/0.8),
+                0 0 120px hsl(var(--primary)/0.5);
+    border-color: hsl(var(--primary));
     animation: neon-flicker 1.5s infinite alternate;
   }
   
