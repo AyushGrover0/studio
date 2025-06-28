@@ -60,10 +60,10 @@ export function Header() {
           <span className="text-xl font-bold text-foreground font-headline">A.G. VISUALS</span>
         </Link>
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <Button variant="ghost" onClick={() => scrollTo('skills')}>Skills</Button>
-          <Button variant="ghost" onClick={() => scrollTo('portfolio')}>Portfolio</Button>
-          <Button variant="ghost" onClick={() => scrollTo('thumbnails')}>Thumbnails</Button>
-          <Button variant="ghost" onClick={() => scrollTo('testimonials')}>Testimonials</Button>
+          <Button variant="ghost" className="hover:text-primary hover:drop-shadow-[0_0_10px_hsl(var(--primary))] transition-all duration-300" onClick={() => scrollTo('skills')}>Skills</Button>
+          <Button variant="ghost" className="hover:text-primary hover:drop-shadow-[0_0_10px_hsl(var(--primary))] transition-all duration-300" onClick={() => scrollTo('portfolio')}>Portfolio</Button>
+          <Button variant="ghost" className="hover:text-primary hover:drop-shadow-[0_0_10px_hsl(var(--primary))] transition-all duration-300" onClick={() => scrollTo('thumbnails')}>Thumbnails</Button>
+          <Button variant="ghost" className="hover:text-primary hover:drop-shadow-[0_0_10px_hsl(var(--primary))] transition-all duration-300" onClick={() => scrollTo('testimonials')}>Testimonials</Button>
         </nav>
         <Button onClick={() => scrollTo('contact')} className="hidden md:inline-flex" glow="accent">
           Contact Me
