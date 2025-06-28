@@ -53,7 +53,7 @@ export function Header() {
   return (
     <header 
       ref={headerRef}
-      className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur-lg border-b border-border/30">
+      className="sticky top-0 z-50 w-full bg-background/10 backdrop-blur-lg border-b border-border/30">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Logo />
