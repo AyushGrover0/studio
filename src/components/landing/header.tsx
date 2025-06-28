@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 const Logo = () => (
@@ -14,16 +13,6 @@ const Logo = () => (
 );
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -32,10 +21,7 @@ export function Header() {
   };
 
   return (
-    <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-300",
-      scrolled ? "bg-card/40 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
-    )}>
+    <header className="sticky top-0 z-50 w-full bg-card/40 backdrop-blur-xl border-b border-border/30">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Logo />
