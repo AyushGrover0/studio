@@ -57,4 +57,43 @@
     animation: fade-in-up 0.8s ease-out forwards;
     opacity: 0;
   }
+  
+  @keyframes move-blob-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(20vw, -15vh) scale(0.9); }
+    50% { transform: translate(-10vw, 10vh) scale(1.1); }
+    75% { transform: translate(15vw, 20vh) scale(1); }
+  }
+
+  @keyframes move-blob-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(-15vw, 10vh) scale(1.1); }
+    50% { transform: translate(20vw, -5vh) scale(0.9); }
+    75% { transform: translate(-10vw, -15vh) scale(1); }
+  }
+
+  .liquid-bg {
+    @apply absolute inset-0 z-0 overflow-hidden;
+  }
+
+  .liquid-bg::before,
+  .liquid-bg::after {
+    content: '';
+    @apply absolute w-[30vw] h-[30vw] min-w-[350px] min-h-[350px] rounded-full opacity-40;
+    filter: blur(80px);
+  }
+
+  .liquid-bg::before {
+    @apply bg-primary top-[-5%] left-[-5%];
+    animation: move-blob-1 25s infinite ease-in-out;
+  }
+
+  .liquid-bg::after {
+    @apply bg-accent bottom-[-5%] right-[-5%];
+    animation: move-blob-2 30s infinite ease-in-out -5s;
+  }
+
+  .glass-card {
+      @apply bg-card/60 backdrop-blur-lg;
+  }
 }

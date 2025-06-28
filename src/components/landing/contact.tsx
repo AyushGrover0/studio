@@ -51,7 +51,7 @@ export function Contact() {
   }, [state, toast]);
 
   return (
-    <section id="contact" className="py-12 md:py-24 bg-background/50">
+    <section id="contact" className="py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
@@ -64,7 +64,7 @@ export function Contact() {
               <p className="text-lg">@anime_sorcerer_0</p>
             </div>
           </div>
-          <Card className="shadow-lg">
+          <Card className="shadow-lg glass-card border border-border/30">
             <CardHeader>
               <CardTitle>Get in Touch</CardTitle>
               <CardDescription>Let’s bring your vision to the screen — DM me or fill out the form below.</CardDescription>

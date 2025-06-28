@@ -26,7 +26,7 @@ const skills = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-12 md:py-24 bg-background/50">
+    <section id="skills" className="py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">What I Do Best</h2>
@@ -36,7 +36,7 @@ export function Skills() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill, index) => (
-            <Card key={index} className="bg-card border-2 border-border/50 hover:border-accent transition-colors duration-300 flex flex-col">
+            <Card key={index} className="glass-card border border-border/30 hover:border-accent transition-colors duration-300 flex flex-col">
               <CardHeader className="flex flex-row items-center gap-4 pb-2">
                 {skill.icon}
                 <CardTitle>{skill.title}</CardTitle>
@@ -46,7 +46,7 @@ export function Skills() {
               </CardContent>
             </Card>
           ))}
-           <Card className="bg-card border-2 border-accent/50 hover:border-accent transition-colors duration-300 flex flex-col">
+           <Card className="glass-card border border-accent/50 hover:border-accent transition-colors duration-300 flex flex-col">
                <CardHeader className="flex flex-row items-center gap-4 pb-2">
                  <Star className="h-8 w-8 text-accent" />
                  <CardTitle>Why Choose Me?</CardTitle>

@@ -47,16 +47,11 @@ const thumbnails = [
     alt: 'Custom thumbnail 9',
     aiHint: 'youtube thumbnail',
   },
-  {
-    src: '/thumb10.png',
-    alt: 'Custom thumbnail 10',
-    aiHint: 'youtube thumbnail',
-  },
 ];
 
 export function Thumbnails() {
   return (
-    <section id="thumbnails" className="py-12 md:py-24 bg-background/50">
+    <section id="thumbnails" className="py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Thumbnails That Convert</h2>
@@ -66,7 +61,7 @@ export function Thumbnails() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {thumbnails.map((thumbnail, index) => (
-            <Card key={index} className="overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-card">
+            <Card key={index} className="glass-card overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20">
               <CardContent className="p-0">
                 <Image
                   src={thumbnail.src}

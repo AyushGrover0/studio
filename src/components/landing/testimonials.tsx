@@ -8,7 +8,7 @@ const testimonials = [
     handle: 'Game Dev @ Cybergames',
     avatar: 'YT',
     image: 'https://placehold.co/100x100.png',
-    aiHint: 'game developer',
+    aiHint: 'male game developer',
     testimonial: "Incredible work! The trailer they edited for our game captured the exact high-energy, futuristic vibe we were going for. The turnaround was fast, and the communication was flawless. A true pro!",
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
     handle: 'Filmmaker',
     avatar: 'AS',
     image: 'https://placehold.co/100x100.png',
-    aiHint: 'anime director',
+    aiHint: 'male filmmaker',
     testimonial: "I've never worked with an editor who understands pacing and emotional beats so intuitively. They transformed my raw footage into a cinematic masterpiece. Will definitely hire again for my next project.",
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
     handle: 'VTuber Sensation',
     avatar: 'ML',
     image: 'https://placehold.co/100x100.png',
-    aiHint: 'vTuber avatar',
+    aiHint: 'female vTuber avatar',
     testimonial: "My stream highlights have never looked better! The edits are sharp, funny, and perfectly timed. My audience loves the new montages. 10/10 would recommend!",
   },
 ];
@@ -32,7 +32,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-12 md:py-24 bg-background">
+    <section id="testimonials" className="py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">What Clients Are Saying</h2>
@@ -51,7 +51,7 @@ export function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2">
                 <div className="p-1">
-                  <Card className="h-full bg-card border-2 border-border shadow-lg flex flex-col justify-between">
+                  <Card className="glass-card h-full border border-border/30 shadow-lg flex flex-col justify-between">
                     <CardContent className="p-6">
                       <p className="text-lg italic text-foreground/90">"{testimonial.testimonial}"</p>
                       <div className="flex items-center gap-4 mt-6">

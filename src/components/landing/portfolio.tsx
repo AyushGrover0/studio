@@ -36,7 +36,7 @@ const portfolioItems: {
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-12 md:py-24 bg-background">
+    <section id="portfolio" className="py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Visions Brought to Life</h2>
@@ -46,7 +46,7 @@ export function Portfolio() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
           {portfolioItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-card">
+            <Card key={index} className="glass-card overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20">
               <CardHeader className="p-0">
                  <div className="aspect-video w-full bg-black">
                   {item.videoUrl ? (
