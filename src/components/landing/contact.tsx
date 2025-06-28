@@ -19,7 +19,7 @@ const initialState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+    <Button type="submit" disabled={pending} size="lg" className="w-full bg-accent/70 text-accent-foreground hover:bg-accent/80">
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
       Send Message
     </Button>

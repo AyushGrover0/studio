@@ -27,17 +27,17 @@ export function Hero() {
       </video>
       <div className="absolute inset-0 bg-background/60 backdrop-brightness-75 z-10" />
       <div className="relative z-20 container mx-auto px-4 md:px-6">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline animate-fade-in-up">
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline animate-fade-in-up" data-ai-hint="futuristic cityscape">
           🔥 Ayush Grover | Video Editor & Visual Artist
         </h1>
         <p className="mx-auto mt-6 max-w-[700px] text-lg text-primary/90 md:text-xl animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           🎬 Crafting Edits That Speak Louder Than Words. From high-octane gaming montages to captivating anime edits, I turn raw clips into cinematic stories.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-          <Button onClick={() => scrollTo('portfolio')} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto">
+          <Button onClick={() => scrollTo('portfolio')} size="lg" className="bg-primary/70 text-primary-foreground hover:bg-primary/80 w-full sm:w-auto">
             Explore My Work
           </Button>
-          <Button onClick={() => scrollTo('contact')} size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground w-full sm:w-auto">
+          <Button onClick={() => scrollTo('contact')} size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/70 hover:text-accent-foreground w-full sm:w-auto">
             Get In Touch
           </Button>
         </div>
