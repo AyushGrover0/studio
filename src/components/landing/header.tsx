@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -13,6 +13,8 @@ const Logo = () => (
 );
 
 export function Header() {
+  const headerRef = useRef<HTMLElement>(null);
+  
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -20,8 +22,36 @@ export function Header() {
     }
   };
 
+  useEffect(() => {
+    const headerElement = headerRef.current;
+    if (!headerElement) return;
+
+    const handleDistortion = () => {
+      if (headerElement.classList.contains('header-distort')) {
+        return;
+      }
+      headerElement.classList.add('header-distort');
+    };
+
+    const handleAnimationEnd = () => {
+      headerElement.classList.remove('header-distort');
+    };
+
+    headerElement.addEventListener('mouseenter', handleDistortion);
+    headerElement.addEventListener('click', handleDistortion);
+    headerElement.addEventListener('animationend', handleAnimationEnd);
+
+    return () => {
+      headerElement.removeEventListener('mouseenter', handleDistortion);
+      headerElement.removeEventListener('click', handleDistortion);
+      headerElement.removeEventListener('animationend', handleAnimationEnd);
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-2xl border-b border-border/30 relative overflow-hidden water-effect">
+    <header 
+      ref={headerRef} 
+      className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-2xl border-b border-border/30 relative overflow-hidden water-effect">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Logo />

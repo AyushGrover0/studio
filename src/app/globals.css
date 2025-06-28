@@ -145,4 +145,27 @@
     animation: water-shimmer 15s ease infinite;
     z-index: -1;
   }
+  
+  @keyframes header-distortion {
+    0% {
+      backdrop-filter: blur(40px);
+      transform: scale(1);
+    }
+    30% {
+      backdrop-filter: blur(10px) brightness(1.3) saturate(1.5);
+      transform: scale(1.01) skew(-1deg, -1deg);
+    }
+    70% {
+      backdrop-filter: blur(15px) brightness(0.9) saturate(0.8);
+      transform: scale(0.99) skew(1deg, 1deg);
+    }
+    100% {
+      backdrop-filter: blur(40px);
+      transform: scale(1) skew(0, 0);
+    }
+  }
+
+  .header-distort {
+    animation: header-distortion 0.8s ease-in-out;
+  }
 }
