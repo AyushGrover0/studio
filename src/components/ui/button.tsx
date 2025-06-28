@@ -53,7 +53,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         const element = localRef.current;
         if (!element) return;
 
-        const triggerDistortion = () => {
+        const handleMouseEnter = () => {
             if (element.classList.contains('header-distort')) {
                 return;
             }
@@ -61,7 +61,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         };
 
         const handleClick = (event: MouseEvent) => {
-            triggerDistortion();
+            handleMouseEnter();
+
+            if (!element.classList.contains('button-breaking')) {
+              element.classList.add('button-breaking');
+            }
 
             const drop = document.createElement('div');
             drop.classList.add('raindrop');
@@ -75,17 +79,22 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             }, 2000);
         };
 
-        const handleAnimationEnd = () => {
-            element.classList.remove('header-distort');
+        const handleAnimationEnd = (e: AnimationEvent) => {
+            if (e.animationName === 'header-distortion') {
+              element.classList.remove('header-distort');
+            }
+            if (e.animationName === 'break-and-reform') {
+              element.classList.remove('button-breaking');
+            }
         };
 
-        element.addEventListener('mouseenter', triggerDistortion);
+        element.addEventListener('mouseenter', handleMouseEnter);
         element.addEventListener('click', handleClick);
         element.addEventListener('animationend', handleAnimationEnd);
 
         return () => {
             if (element) {
-              element.removeEventListener('mouseenter', triggerDistortion);
+              element.removeEventListener('mouseenter', handleMouseEnter);
               element.removeEventListener('click', handleClick);
               element.removeEventListener('animationend', handleAnimationEnd);
             }
